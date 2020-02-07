@@ -1,0 +1,37 @@
+{
+  "01/02/2020": {
+    "left swipes": 18,
+    "right swipes": 27,
+    "matches": 1
+  },
+  "02/02/2020": {
+    "left swipes": 13,
+    "right swipes": 25,
+    "matches": 0
+  },
+  "03/02/2020": {
+    "left swipes": 5,
+    "right swipes": 10,
+    "matches": 2
+  },
+  "04/02/2020": {
+    "left swipes": 10,
+    "right swipes": 23,
+    "matches": 1
+  },
+  "05/02/2020": {
+    "left swipes": 3,
+    "right swipes": 5,
+    "matches": 0
+  },
+  "06/02/2020": {
+    "left swipes": 7,
+    "right swipes": 11,
+    "matches": 0
+  },
+  "07/02/2020": {
+    "left swipes": 10,
+    "right swipes": 15,
+    "matches": 2
+  }
+}
