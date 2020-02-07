@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>TEST</title>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <input type="file" name="upload" id="upload">
+    </body>
+    <script>
+        var formData = new FormData();
+        var APIurl = "https://api.haystack.ai/api/image/analyze?apikey=bcc555e7f0a8f53f04f3f2abeae71611&output=json&model=attractiveness";
+        $('#upload').change(function(e){
+           var file = e.target.files[0];
+            console.log(file);
+            var re = /image.*/;
+            if(!file.type.match(re)){
+                return;
+            }
+            var formData = new FormData();
+            formData.append('image', file);
+            $.ajax({
+                type: "POST",
+                url: APIurl,
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function(data){
+                    if(data.people.length != 0){
+                        var score = Math.round(data.people[0].attractiveness);
+                        alert(score + " / 10");
+                    }else{
+                        alert("NO FACE");
+                    }
+                }
+            });   
+        });
+    </script>
+</html>
